@@ -1,0 +1,170 @@
+/* Modern Jupyter Book Theme */
+
+/* Logo size control */
+.navbar-brand img {
+    max-height: 24px !important;  /* Reduced from the default size */
+    width: auto;
+}
+
+/* Rest of your CSS remains the same */
+/* Light mode variables */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --accent-color: #60a5fa;
+    --background-color: #ffffff;
+    --text-color: #1f2937;
+    --code-background: #f1f5f9;
+    --border-color: #e5e7eb;
+    --link-color: #2563eb;
+    --sidebar-background: #ffffff;
+    --navbar-background: #ffffff;
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+    --primary-color: #60a5fa;
+    --secondary-color: #3b82f6;
+    --accent-color: #93c5fd;
+    --background-color: #1a1a1a;
+    --text-color: #e5e7eb;
+    --code-background: #2d2d2d;
+    --border-color: #404040;
+    --link-color: #60a5fa;
+    --sidebar-background: #1a1a1a;
+    --navbar-background: #1a1a1a;
+}
+
+/* Base styles */
+body {
+    font-family: var(--font-family-base, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--background-color);
+}
+
+/* Navigation and Layout */
+.bd-sidebar {
+    background-color: var(--sidebar-background);
+    border-right: 1px solid var(--border-color);
+}
+
+.bd-sidebar .nav-link {
+    color: var(--text-color);
+}
+
+.navbar-light {
+    background-color: var(--navbar-background) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--text-color) !important;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Code blocks */
+pre, code {
+    background-color: var(--code-background) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-color) !important;
+}
+
+.highlight {
+    background-color: var(--code-background) !important;
+}
+
+div[class^='highlight'] pre {
+    background-color: var(--code-background) !important;
+    color: var(--text-color) !important;
+}
+
+/* Tables */
+table {
+    border-color: var(--border-color) !important;
+}
+
+th {
+    background-color: var(--code-background) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-color) !important;
+}
+
+td {
+    border-color: var(--border-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* TOC and Navigation */
+.bd-toc {
+    border-left: 1px solid var(--border-color);
+    background-color: var(--sidebar-background);
+}
+
+.bd-toc .toc-entry a {
+    color: var(--text-color);
+}
+
+.bd-toc .toc-entry a:hover {
+    color: var(--accent-color);
+}
+
+/* Search */
+.bd-search input {
+    background-color: var(--code-background);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+/* Admonitions */
+.admonition {
+    background-color: var(--code-background);
+    border-left: 4px solid var(--primary-color);
+}
+
+.admonition .admonition-title {
+    color: var(--text-color);
+}
+
+/* Buttons and UI elements */
+.btn {
+    background-color: var(--code-background);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Theme toggle specific styles */
+.theme-switch-button {
+    background-color: transparent !important;
+    color: var(--text-color) !important;
+}
+
+/* Mathematics and equations */
+.math {
+    color: var(--text-color);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .bd-sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+}

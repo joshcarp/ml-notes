@@ -1,0 +1,32 @@
+# Book settings
+title: "ML Notes"
+author: Josh Carpeggiani
+copyright: "2024"
+logo: "_static/assets/CognitionTO-icon-black.png"
+
+# Force re-execution of notebooks on each build
+execute:
+  execute_notebooks: force
+
+# Define the repository information
+repository:
+  url: https://github.com/joshcarp/ml-notes
+  path_to_book: ""
+  branch: main
+
+# Launch button settings
+launch_buttons:
+  notebook_interface: "jupyterlab"
+  colab_url: "https://colab.research.google.com"
+
+# HTML-specific settings
+html:
+  favicon: "_static/assets/CognitionTO-icon-black.png"
+  use_edit_page_button: true
+  use_repository_button: true
+  use_issues_button: true
+  use_download_button: true
+  home_page_in_navbar: true
+  baseurl: ""
+  extra_css:
+    - _static/custom.css
