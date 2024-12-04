@@ -1,42 +1,18 @@
-# Welcome to your Modern Jupyter Book
+# Welcome to ML Notes
 
-This is a small sample book to demonstrate the modern theme we've created.
+This is a collection of machine learning notes, examples, and tutorials.
 
-## Features of this theme
+## What's included
 
-- Clean, modern typography
-- Professional color scheme
-- Responsive design
-- Enhanced code blocks
-- Improved navigation
+- Machine Learning fundamentals
+- Deep Learning examples
+- Code implementations
+- Math and theory explanations
 
 ```{note}
-This is a sample note that demonstrates the styling of admonitions.
+All code examples can be run directly in Google Colab by clicking the rocket icon 🚀 in the top menu.
 ```
 
-## Sample equation
+## Getting Started
 
-Here's a sample equation to demonstrate math rendering:
-
-$$
-\frac{\partial f}{\partial x} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
-$$
-
-## Sample code
-
-Here's a Python code block:
-
-```python
-def hello_world():
-    print("Welcome to Modern Jupyter Book!")
-    return "Hello, World!"
-```
-
-## Sample table
-
-| Feature | Description |
-|---------|-------------|
-| Typography | Clean and modern fonts |
-| Colors | Professional palette |
-| Code blocks | Enhanced readability |
-| Navigation | Improved sidebar |
+Choose a topic from the left sidebar to begin learning.

@@ -1,0 +1,807 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Machine Learning Research Papers &#8212; ML Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ml_papers';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Machine Learning Concepts and Terminology" href="ml_concepts.html" />
+    <link rel="prev" title="Content with notebooks" href="notebooks.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ML Notes</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to ML Notes
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/joshcarp/ml-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/joshcarp/ml-notes/edit/main/ml_papers.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/joshcarp/ml-notes/issues/new?title=Issue%20on%20page%20%2Fml_papers.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/ml_papers.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Machine Learning Research Papers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-foundation-papers">The Foundation Papers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attention-is-all-you-need-2017">Attention Is All You Need (2017)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improving-language-understanding-by-generative-pre-training-2018">Improving Language Understanding by Generative Pre-Training (2018)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-and-internal-architecture">Methods and Internal Architecture</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-error-linear-units-gelus">Gaussian Error Linear Units (GELUs)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-normalization">Layer Normalization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roformer-enhanced-transformer-with-rotary-position-embedding">RoFormer: Enhanced Transformer with Rotary Position Embedding</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recent-models">Recent Models</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#llama-series">LLaMA Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microsoft-phi-1">Microsoft Phi-1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openelm">OpenELM</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-techniques">Training Techniques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#federated-learning">Federated Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distributed-training-framework">Distributed Training Framework</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distilbert">DistilBERT</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-and-ethics">Safety and Ethics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jailbreaking-research">Jailbreaking Research</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emotional-influence">Emotional Influence</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretability">Interpretability</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latent-space-manipulation">Latent Space Manipulation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monosemanticity">Monosemanticity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-uncertainty">Model Uncertainty</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-quality-and-model-training">Data Quality and Model Training</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tinystories">TinyStories</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-collapse-research">Model Collapse Research</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-research-directions">Future Research Directions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-list">Reading List</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="machine-learning-research-papers">
+<h1>Machine Learning Research Papers<a class="headerlink" href="#machine-learning-research-papers" title="Permalink to this heading">#</a></h1>
+<p>This chapter provides an overview of important research papers in machine learning, particularly focusing on large language models, transformers, and related technologies.</p>
+<section id="the-foundation-papers">
+<h2>The Foundation Papers<a class="headerlink" href="#the-foundation-papers" title="Permalink to this heading">#</a></h2>
+<p>These papers laid the groundwork for the current LLM paradigm:</p>
+<section id="attention-is-all-you-need-2017">
+<h3>Attention Is All You Need (2017)<a class="headerlink" href="#attention-is-all-you-need-2017" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Introduced the Transformer architecture and self-attention mechanism</p></li>
+<li><p>Key breakthrough: Enabled significant parallelization, training in just 12 hours on 8 P100 GPUs</p></li>
+<li><p>Established the encoder/decoder architecture (encoder later dropped except for translation tasks)</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/1706.03762v7">Read the paper</a></p></li>
+</ul>
+</section>
+<section id="improving-language-understanding-by-generative-pre-training-2018">
+<h3>Improving Language Understanding by Generative Pre-Training (2018)<a class="headerlink" href="#improving-language-understanding-by-generative-pre-training-2018" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Introduced the GPT (Generative Pre-trained Transformer)</p></li>
+<li><p>Pioneered next-token prediction for self-supervised learning</p></li>
+<li><p>Enabled learning from internet-scale data with a simple vocabulary-based loss function</p></li>
+<li><p><a class="reference external" href="https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf">Read the paper</a></p></li>
+</ul>
+</section>
+</section>
+<section id="methods-and-internal-architecture">
+<h2>Methods and Internal Architecture<a class="headerlink" href="#methods-and-internal-architecture" title="Permalink to this heading">#</a></h2>
+<p>Papers covering the internal workings of transformer architectures:</p>
+<section id="gaussian-error-linear-units-gelus">
+<h3>Gaussian Error Linear Units (GELUs)<a class="headerlink" href="#gaussian-error-linear-units-gelus" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Activation function that preserves positive values while mapping negatives near zero</p></li>
+<li><p>Used in many modern architectures</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/1606.08415v5">Read the paper</a></p></li>
+</ul>
+</section>
+<section id="layer-normalization">
+<h3>Layer Normalization<a class="headerlink" href="#layer-normalization" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Applied at each layer’s output activations to prevent value explosion</p></li>
+<li><p>Makes optimization surface more regular and symmetrical</p></li>
+<li><p>Helps maintain consistent input magnitudes for activation functions</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/1607.06450">Read the paper</a></p></li>
+</ul>
+</section>
+<section id="roformer-enhanced-transformer-with-rotary-position-embedding">
+<h3>RoFormer: Enhanced Transformer with Rotary Position Embedding<a class="headerlink" href="#roformer-enhanced-transformer-with-rotary-position-embedding" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Implements positional embeddings on a circle rather than linearly</p></li>
+<li><p>Used in LLaMA and other modern architectures</p></li>
+<li><p>Potential applications for scope-based embeddings in programming tasks</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2104.09864">Read the paper</a></p></li>
+</ul>
+</section>
+</section>
+<section id="recent-models">
+<h2>Recent Models<a class="headerlink" href="#recent-models" title="Permalink to this heading">#</a></h2>
+<p>Notable recent developments in language models:</p>
+<section id="llama-series">
+<h3>LLaMA Series<a class="headerlink" href="#llama-series" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>LLaMA</strong>: Meta AI’s initial open-source LLM release</p>
+<ul>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2302.13971">Read the paper</a></p></li>
+</ul>
+</li>
+<li><p><strong>Llama 2</strong>: Improved collection of pretrained and fine-tuned models</p>
+<ul>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2307.09288">Read the paper</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="microsoft-phi-1">
+<h3>Microsoft Phi-1<a class="headerlink" href="#microsoft-phi-1" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Used very curated dataset with LLaMA architecture</p></li>
+<li><p>Demonstrated importance of data quality over quantity</p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/research/publication/textbooks-are-all-you-need/">Read the paper</a></p></li>
+</ul>
+</section>
+<section id="openelm">
+<h3>OpenELM<a class="headerlink" href="#openelm" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Innovative scaling of layers with more attention heads and wider FFN in later layers</p></li>
+<li><p>Allows parameters more “time” to extract information through previous layers</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2404.14619">Read the paper</a></p></li>
+</ul>
+</section>
+</section>
+<section id="training-techniques">
+<h2>Training Techniques<a class="headerlink" href="#training-techniques" title="Permalink to this heading">#</a></h2>
+<section id="federated-learning">
+<h3>Federated Learning<a class="headerlink" href="#federated-learning" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Moves training and models to user devices</p></li>
+<li><p>Enables personalized improvements while maintaining privacy</p></li>
+<li><p>Uses weight accumulation at central location</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2307.08925">Read the paper</a></p></li>
+</ul>
+</section>
+<section id="distributed-training-framework">
+<h3>Distributed Training Framework<a class="headerlink" href="#distributed-training-framework" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Implements secure weight merging</p></li>
+<li><p>Maintains security and anonymity in distributed settings</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2401.09796v2">Read the paper</a></p></li>
+</ul>
+</section>
+<section id="distilbert">
+<h3>DistilBERT<a class="headerlink" href="#distilbert" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Important baseline model in many tutorials</p></li>
+<li><p>Demonstrates effective model distillation</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/1910.01108">Read the paper</a></p></li>
+</ul>
+</section>
+</section>
+<section id="safety-and-ethics">
+<h2>Safety and Ethics<a class="headerlink" href="#safety-and-ethics" title="Permalink to this heading">#</a></h2>
+<section id="jailbreaking-research">
+<h3>Jailbreaking Research<a class="headerlink" href="#jailbreaking-research" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Demonstrates vulnerability of long context windows</p></li>
+<li><p>Shows potential to bypass fine-tuning guardrails</p></li>
+<li><p><a class="reference external" href="https://www.anthropic.com/research/many-shot-jailbreaking">Read more</a></p></li>
+</ul>
+</section>
+<section id="emotional-influence">
+<h3>Emotional Influence<a class="headerlink" href="#emotional-influence" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Research on LLM performance under emotional pressure</p></li>
+<li><p>Explores ethical implications of emotional manipulation</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/pdf/2307.11760">Read the paper</a></p></li>
+</ul>
+</section>
+</section>
+<section id="interpretability">
+<h2>Interpretability<a class="headerlink" href="#interpretability" title="Permalink to this heading">#</a></h2>
+<section id="latent-space-manipulation">
+<h3>Latent Space Manipulation<a class="headerlink" href="#latent-space-manipulation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Research on steering vectors in pretrained models</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2205.05124">Read the paper</a></p></li>
+</ul>
+</section>
+<section id="monosemanticity">
+<h3>Monosemanticity<a class="headerlink" href="#monosemanticity" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Anthropic’s work on extracting interpretable features</p></li>
+<li><p>Applications for monitoring and prompt engineering</p></li>
+<li><p><a class="reference external" href="https://www.anthropic.com/news/mapping-mind-language-model">Read more</a></p></li>
+</ul>
+</section>
+<section id="model-uncertainty">
+<h3>Model Uncertainty<a class="headerlink" href="#model-uncertainty" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>DeepMind’s work on hallucination detection</p></li>
+<li><p>Distinguishes between epistemic and aleatoric uncertainty</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2406.02543">Read the paper</a></p></li>
+</ul>
+</section>
+</section>
+<section id="data-quality-and-model-training">
+<h2>Data Quality and Model Training<a class="headerlink" href="#data-quality-and-model-training" title="Permalink to this heading">#</a></h2>
+<section id="tinystories">
+<h3>TinyStories<a class="headerlink" href="#tinystories" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Demonstrated coherent English generation with only ~10M parameters</p></li>
+<li><p>Used clean dataset of ~2M short stories</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2305.07759">Read the paper</a></p></li>
+</ul>
+</section>
+<section id="model-collapse-research">
+<h3>Model Collapse Research<a class="headerlink" href="#model-collapse-research" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Investigated issues with training on generated data</p></li>
+<li><p>Explored solutions through data accumulation</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2305.17493">Read the paper</a></p></li>
+</ul>
+</section>
+</section>
+<section id="future-research-directions">
+<h2>Future Research Directions<a class="headerlink" href="#future-research-directions" title="Permalink to this heading">#</a></h2>
+<p>Areas identified for future research include:</p>
+<ul class="simple">
+<li><p>Improved position embeddings for programming tasks</p></li>
+<li><p>Scope-based attention mechanisms</p></li>
+<li><p>Integration of interpretability findings into training</p></li>
+<li><p>Enhanced security and privacy in distributed training</p></li>
+<li><p>Novel applications of latent space manipulation</p></li>
+</ul>
+</section>
+<section id="reading-list">
+<h2>Reading List<a class="headerlink" href="#reading-list" title="Permalink to this heading">#</a></h2>
+<p>Important papers for further reading:</p>
+<ul class="simple">
+<li><p>Singularity theories by Raymond Kurzweil</p></li>
+<li><p>Position embedding comparisons</p></li>
+<li><p>Privacy preservation in federated learning</p></li>
+<li><p>Hallucination detection methods</p></li>
+<li><p>Time-series forecasting with transformers</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="notebooks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Content with notebooks</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ml_concepts.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Machine Learning Concepts and Terminology</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-foundation-papers">The Foundation Papers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attention-is-all-you-need-2017">Attention Is All You Need (2017)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improving-language-understanding-by-generative-pre-training-2018">Improving Language Understanding by Generative Pre-Training (2018)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-and-internal-architecture">Methods and Internal Architecture</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-error-linear-units-gelus">Gaussian Error Linear Units (GELUs)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-normalization">Layer Normalization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roformer-enhanced-transformer-with-rotary-position-embedding">RoFormer: Enhanced Transformer with Rotary Position Embedding</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recent-models">Recent Models</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#llama-series">LLaMA Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microsoft-phi-1">Microsoft Phi-1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openelm">OpenELM</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-techniques">Training Techniques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#federated-learning">Federated Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distributed-training-framework">Distributed Training Framework</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distilbert">DistilBERT</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-and-ethics">Safety and Ethics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jailbreaking-research">Jailbreaking Research</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emotional-influence">Emotional Influence</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretability">Interpretability</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latent-space-manipulation">Latent Space Manipulation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monosemanticity">Monosemanticity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-uncertainty">Model Uncertainty</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-quality-and-model-training">Data Quality and Model Training</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tinystories">TinyStories</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-collapse-research">Model Collapse Research</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-research-directions">Future Research Directions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-list">Reading List</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Josh Carpeggiani
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -2,7 +2,7 @@ import http.server
 import socketserver
 import os
 
-PORT = 8004
+PORT = 8006
 DIRECTORY = "_build/html"
 
 class Handler(http.server.SimpleHTTPRequestHandler):

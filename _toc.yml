@@ -3,4 +3,8 @@ format: jb-book
 root: intro
 chapters:
 - file: notebooks
-- file: markdown-notebooks
+  title: ML Examples
+- file: ml_papers
+  title: Research Papers
+- file: ml_concepts
+  title: ML Concepts
