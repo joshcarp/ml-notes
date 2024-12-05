@@ -1,18 +1,7 @@
-# Welcome to ML Notes
+# Machine Learning Notes
 
-This is a collection of machine learning notes, examples, and tutorials.
+This website uses the Divio Documentation System to organize machine learning knowledge. The content is structured to serve different needs:
 
-## What's included
+## 📚 Documentation Types
 
-- Machine Learning fundamentals
-- Deep Learning examples
-- Code implementations
-- Math and theory explanations
-
-```{note}
-All code examples can be run directly in Google Colab by clicking the rocket icon 🚀 in the top menu.
-```
-
-## Getting Started
-
-Choose a topic from the left sidebar to begin learning.
+[rest of your existing content...]

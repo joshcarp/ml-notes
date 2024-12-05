@@ -1,0 +1,21 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  jupyter: true
+  id: af717f67-a8e5-4337-ac20-caf05da70397
+  title: "ML Notes"
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/joshcarp/ml-notes
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+    
+site:
+  template: book-theme
+  title: "ML Notes"
+  options:
+    logo_text: ML Notes
+    folders: true
+    
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
