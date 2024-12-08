@@ -1,20 +1,62 @@
-# Jupyter Book (via myst) build outputs
-_build
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-# Jupyter Book (via myst) build outputs
-_build
+# C extensions
+*.so
 
-# Jupyter Book (via myst) build outputs
-_build
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
 
-# Jupyter Book (via myst) build outputs
-_build
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+ENV/
 
-# Jupyter Book (via myst) build outputs
-_build
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_meta
 
-# Jupyter Book (via myst) build outputs
-_build
+# PyCharm
+.idea/
+*.iml
 
-# Jupyter Book (via myst) build outputs
-_build
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# Pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# Logs
+*.log
+
+# Local development settings
+.env
+.env.local
+
+# Documentation
+docs/_build/
+
+# Poetry
+poetry.lock
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
