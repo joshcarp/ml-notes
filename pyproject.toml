@@ -1,0 +1,13 @@
+[project]
+name = "example"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyter-book==2.0.0a0",
+    "swarm",
+]
+
+[tool.uv.sources]
+swarm = { git = "https://github.com/openai/swarm.git", rev = "9db581cecaacea0d46a933d6453c312b034dbf47" }
