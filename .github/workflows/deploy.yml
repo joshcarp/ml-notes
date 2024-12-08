@@ -21,21 +21,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.13.0'
-          
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          
-      - name: Build the book
-        run: |
-          jupyter-book build --html --site
-          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
