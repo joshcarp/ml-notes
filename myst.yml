@@ -42,6 +42,10 @@ project:
       file: paper-notes/index.md
       children:
         - file: paper-notes/perplexity-based-data-pruning.md
+    - title: Experiments
+      file: experiments/index.md
+      children:
+        - file: experiments/higher-abstract-reasoning.ipynb
     
 site:
   template: book-theme
