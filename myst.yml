@@ -1,6 +1,8 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
+  plugins:
+    - plugins/utterances.js
   jupyter: true
   id: af717f67-a8e5-4337-ac20-caf05da70397
   title: "ML Notes"
